@@ -123,6 +123,7 @@ namespace FlightSimulatorControlCenter
         private void managerToolStripMenuItem_Click(object sender, EventArgs e)//manager voli
         {
 
+            
         }
 
         private void managerToolStripMenuItem1_Click(object sender, EventArgs e)//manager biblietti
