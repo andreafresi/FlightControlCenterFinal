@@ -1836,7 +1836,7 @@ namespace Clients.ImpiantiClient
         public double ImportoTotale { get; set; }
 
         [System.Text.Json.Serialization.JsonPropertyName("dataAcquisto")]
-        public System.DateTimeOffset DataAcquisto { get; set; }
+        public System.DateTime DataAcquisto { get; set; }
 
     }
 
@@ -1899,10 +1899,10 @@ namespace Clients.ImpiantiClient
         public string Destinazione { get; set; }
 
         [System.Text.Json.Serialization.JsonPropertyName("orarioPartenza")]
-        public System.DateTimeOffset OrarioPartenza { get; set; }
+        public System.DateTime OrarioPartenza { get; set; }
 
         [System.Text.Json.Serialization.JsonPropertyName("orarioDestinazione")]
-        public System.DateTimeOffset OrarioDestinazione { get; set; }
+        public System.DateTime OrarioDestinazione { get; set; }
 
     }
 
@@ -1962,10 +1962,10 @@ namespace Clients.ImpiantiClient
         public string Destinazione { get; set; }
 
         [System.Text.Json.Serialization.JsonPropertyName("orarioPartenza")]
-        public System.DateTimeOffset OrarioPartenza { get; set; }
+        public System.DateTime OrarioPartenza { get; set; }
 
         [System.Text.Json.Serialization.JsonPropertyName("orarioDestinazione")]
-        public System.DateTimeOffset OrarioDestinazione { get; set; }
+        public System.DateTime OrarioDestinazione { get; set; }
 
     }
 
@@ -1992,10 +1992,10 @@ namespace Clients.ImpiantiClient
         public string Destinazione { get; set; }
 
         [System.Text.Json.Serialization.JsonPropertyName("orarioPartenza")]
-        public System.DateTimeOffset OrarioPartenza { get; set; }
+        public System.DateTime OrarioPartenza { get; set; }
 
         [System.Text.Json.Serialization.JsonPropertyName("orarioDestinazione")]
-        public System.DateTimeOffset OrarioDestinazione { get; set; }
+        public System.DateTime OrarioDestinazione { get; set; }
 
     }
 
