@@ -66,6 +66,7 @@
             button3.TabIndex = 2;
             button3.Text = "Cancella";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click_1;
             // 
             // button4
             // 
@@ -75,6 +76,7 @@
             button4.TabIndex = 3;
             button4.Text = "Modifica";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click_1;
             // 
             // button5
             // 
@@ -84,6 +86,7 @@
             button5.TabIndex = 4;
             button5.Text = "Seleziona";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // checkBox1
             // 
