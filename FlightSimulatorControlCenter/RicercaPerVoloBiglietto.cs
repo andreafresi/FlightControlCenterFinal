@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlightSimulatorControlCenter.Model.Event;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace FlightSimulatorControlCenter
 {
     public partial class RicercaPerVoloBiglietto : Form
     {
+        public event RicercaPerVoloBigliettoEvent i; // per Evento
+
         public RicercaPerVoloBiglietto()
         {
             InitializeComponent();
