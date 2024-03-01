@@ -15,6 +15,8 @@ namespace FlightSimulatorControlCenter
         // Aggiungo la ref alle due form
         AirplaneManager airplaneManagerForm;
         FleetManager fleetManagerForm;
+        VoliManager voliManagerForm;
+        BigliettoManager bigliettoManagerForm;
 
         long idFlottaSelezionata = -1;
 
@@ -123,12 +125,23 @@ namespace FlightSimulatorControlCenter
         private void managerToolStripMenuItem_Click(object sender, EventArgs e)//manager voli
         {
 
-            
+            if (!FormUtils.FormIsOpen("VoliManager"))
+            {
+                voliManagerForm = new VoliManager(_validationService, _externalService, _conversionService);
+                voliManagerForm.MdiParent = this;
+                voliManagerForm.Show();
+            }
+
         }
 
         private void managerToolStripMenuItem1_Click(object sender, EventArgs e)//manager biblietti
         {
-
+            if (!FormUtils.FormIsOpen("BigliettoManager"))
+            {
+                bigliettoManagerForm = new BigliettoManager(_validationService, _externalService, _conversionService);
+                bigliettoManagerForm.MdiParent = this;
+                bigliettoManagerForm.Show();
+            }
         }
     }
 }

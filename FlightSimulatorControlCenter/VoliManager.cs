@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlightSimulatorControlCenter.Service.Int;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,17 @@ namespace FlightSimulatorControlCenter
 {
     public partial class VoliManager : Form
     {
-        public VoliManager()
+
+        private IValidationUserInputService _validationService;
+        private IExternalServicesService _externalService;
+        private IConversionModelService _conversionService;
+        public VoliManager(IValidationUserInputService validationService, IExternalServicesService externalService, IConversionModelService conversionService)
         {
-            InitializeComponent();
+           InitializeComponent();
+           _validationService = validationService;
+           _externalService = externalService;
+            _conversionService = conversionService;
+           
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -24,7 +24,8 @@ namespace FlightSimulatorControlCenter
         //Stato inizializzazione mancante
         private long idFlottaAttiva = -1;
         private FlottaBl flottaAttiva;
-
+        private string bubu;
+        
         private CreazioneAereo creazioneAereoForm;
         private ModificaAereo modificaAereoForm;
         private CancellaAereo cancellaAereoForm;       

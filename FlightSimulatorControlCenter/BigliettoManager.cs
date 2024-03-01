@@ -1,4 +1,5 @@
 ﻿using FlightSimulatorControlCenter.Helper;
+using FlightSimulatorControlCenter.Service.Int;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,12 +14,20 @@ namespace FlightSimulatorControlCenter
 {
     public partial class BigliettoManager : Form
     {
-        RicercaBiglietto formRicercaBiglietto;
-        public BigliettoManager()
+        
+        private IValidationUserInputService _validationService;
+        private IExternalServicesService _externalService;
+        private IConversionModelService _conversionService;
+        public BigliettoManager(IValidationUserInputService validationService, IExternalServicesService externalService, IConversionModelService conversionService)
         {
             InitializeComponent();
-        }
+            _validationService = validationService;
+            _externalService = externalService;
+            _conversionService = conversionService;
 
+        }
+        
+        RicercaBiglietto formRicercaBiglietto;
         private void button1_Click(object sender, EventArgs e) // RICERCA
         {
             // Apro la form di creazione

@@ -34,8 +34,8 @@
             toolStripMenuItem1 = new ToolStripMenuItem();
             scelta1ToolStripMenuItem = new ToolStripMenuItem();
             voliToolStripMenuItem = new ToolStripMenuItem();
-            bigliettiToolStripMenuItem = new ToolStripMenuItem();
             managerToolStripMenuItem = new ToolStripMenuItem();
+            bigliettiToolStripMenuItem = new ToolStripMenuItem();
             managerToolStripMenuItem1 = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -86,6 +86,13 @@
             voliToolStripMenuItem.Size = new Size(48, 24);
             voliToolStripMenuItem.Text = "Voli";
             // 
+            // managerToolStripMenuItem
+            // 
+            managerToolStripMenuItem.Name = "managerToolStripMenuItem";
+            managerToolStripMenuItem.Size = new Size(224, 26);
+            managerToolStripMenuItem.Text = "Manager Voli";
+            managerToolStripMenuItem.Click += managerToolStripMenuItem_Click;
+            // 
             // bigliettiToolStripMenuItem
             // 
             bigliettiToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { managerToolStripMenuItem1 });
@@ -93,18 +100,11 @@
             bigliettiToolStripMenuItem.Size = new Size(75, 24);
             bigliettiToolStripMenuItem.Text = "Biglietti";
             // 
-            // managerToolStripMenuItem
-            // 
-            managerToolStripMenuItem.Name = "managerToolStripMenuItem";
-            managerToolStripMenuItem.Size = new Size(224, 26);
-            managerToolStripMenuItem.Text = "Manager";
-            managerToolStripMenuItem.Click += managerToolStripMenuItem_Click;
-            // 
             // managerToolStripMenuItem1
             // 
             managerToolStripMenuItem1.Name = "managerToolStripMenuItem1";
             managerToolStripMenuItem1.Size = new Size(224, 26);
-            managerToolStripMenuItem1.Text = "Manager";
+            managerToolStripMenuItem1.Text = "Manager Biglietti";
             managerToolStripMenuItem1.Click += managerToolStripMenuItem1_Click;
             // 
             // MainWindow
