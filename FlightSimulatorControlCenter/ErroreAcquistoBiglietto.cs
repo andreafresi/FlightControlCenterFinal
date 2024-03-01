@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace FlightSimulatorControlCenter
 {
-    public partial class CancellaBiglietto : Form
+    public partial class ErroreAcquistoBiglietto : Form
     {
-        public CancellaBiglietto()
+        public ErroreAcquistoBiglietto()
         {
             InitializeComponent();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CancellaBiglietto_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -32,7 +22,7 @@ namespace FlightSimulatorControlCenter
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
