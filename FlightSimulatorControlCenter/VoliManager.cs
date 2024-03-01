@@ -1,4 +1,6 @@
 ﻿using FlightSimulatorControlCenter.Helper;
+using FlightSimulatorControlCenter.Model.Aereo;
+using FlightSimulatorControlCenter.Model.Volo;
 using FlightSimulatorControlCenter.Service.Int;
 using System;
 using System.Collections.Generic;
@@ -70,6 +72,38 @@ namespace FlightSimulatorControlCenter
         private void button5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void InitalizeAereiDataGridFromDBModel()
+        {
+            var result = new BindingList<VoloBl>();
+
+            foreach (var a in flottaAttiva.Aerei)
+            {
+                result.Add(a);
+            }
+
+            var source = new BindingSource(result, null);
+
+            // Binding data source
+            tabellaAerei.DataSource = source;
+
+            // Fit colonne a size tabella
+            tabellaAerei.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            tabellaAerei.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+
+            // Cambio label tabella
+            tabellaAerei.Columns[0].HeaderText = "Id Aereo";
+            tabellaAerei.Columns[0].Name = "IdAereo";
+
+            tabellaAerei.Columns[1].HeaderText = "Cod Aereo";
+            tabellaAerei.Columns[1].Name = "Codice";
+
+            tabellaAerei.Columns[2].HeaderText = "Colore";
+            tabellaAerei.Columns[2].Name = "Colore";
+
+            tabellaAerei.Columns[3].HeaderText = "Num. Posti";
+            tabellaAerei.Columns[3].Name = "NumeroDiPosti";
         }
     }
 }

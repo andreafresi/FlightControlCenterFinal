@@ -25,9 +25,6 @@
             return new AereoBl(idAereo, codice, colore, numeroDiPosti);
         }
 
-        public static AereoBl AereoBlCreateFactory(string codice, string colore, long numeroDiPosti)
-        {
-            return new AereoBl(0, codice, colore, numeroDiPosti);
-        }
+      
     }
 }

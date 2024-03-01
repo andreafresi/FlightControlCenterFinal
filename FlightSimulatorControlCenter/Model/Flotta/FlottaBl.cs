@@ -20,7 +20,8 @@ namespace FlightSimulatorControlCenter.Model.Flotta
             return new FlottaBl(idFlotta, nome, stato, aerei);
         }
 
-        public void AddAereo(AereoBl aereobl) {
+        public void AddAereo(AereoBl aereobl) 
+        {
             this.Aerei.Add(aereobl);
         }
     }

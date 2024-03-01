@@ -2,6 +2,7 @@
 using FlightSimulatorControlCenter.Model.Aereo;
 using FlightSimulatorControlCenter.Model.DB;
 using FlightSimulatorControlCenter.Model.Flotta;
+using FlightSimulatorControlCenter.Model.Volo;
 using FlightSimulatorControlCenter.Service.Int;
 
 namespace FlightSimulatorControlCenter.Service
@@ -18,6 +19,14 @@ namespace FlightSimulatorControlCenter.Service
             AereoBl.AereoBlFactory(1, "AereoCod1", "Rosso", 10),
             AereoBl.AereoBlFactory(2,"AereoCod2", "Blu", 20),
             AereoBl.AereoBlFactory(3,"AereoCod3", "Verde", 10)
+            };
+
+
+            List<VoloBl> volo = new List<VoloBl>()
+            {
+                VoloBl.VoloBlFactory(1,4,20,"Milano","Bari",new DateTime(2024,3,3,12,15,00),new DateTime(2024,3,3,13,15,00)),
+                VoloBl.VoloBlFactory(2,12,500,"New York","Tokyo",new DateTime(2024,3,12,4,30,00),new DateTime(2024,3,3,13,30,00)),
+                 VoloBl.VoloBlFactory(3,14,150,"Napoli","Parigi",new DateTime(2024,3,12,10,00,00),new DateTime(2024,3,3,12,30,00))
             };
 
             var flotta1 = FlottaBl.FlottaBlFactory(1, "WizzAir", "Attiva", aerei);
@@ -38,7 +47,7 @@ namespace FlightSimulatorControlCenter.Service
         public FlottaApi FlottaPOSTAsync(CreateFlottaRequest req)
         {
             List<AereoApi> aerei = new List<AereoApi>();
-            var flotta1 = new FlottaApi() { IdFlotta=DateTime.Now.Ticks, Nome= req.Nome, Aerei= new List<AereoApi>() };
+            var flotta1 = new FlottaApi() { IdFlotta=DateTime.Now.Ticks, Nome= req.NomeFlotta, Aerei= new List<AereoApi>() };
 
             var flottaToAdd = _conversionService.ConvertToBl(flotta1);
 

@@ -106,6 +106,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(774, 290);
             dataGridView1.TabIndex = 6;
+            
             // 
             // VoliManager
             // 
